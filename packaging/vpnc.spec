@@ -11,8 +11,8 @@ Group:          Networking/Security
 Url:            http://svn.unix-ag.uni-kl.de/vpnc/branches/vpnc-nortel
 Requires:       /usr/sbin/ip
 Requires:       /usr/bin/sed
-Source:         %{name}-%{version}.tar.bz2
-Source2:        vpnc.conf
+Source0:         %{name}-%{version}.tar.bz2
+Source1:        vpnc.conf
 Patch1:         vpnc-no-build-dates.patch
 
 %description
@@ -43,7 +43,7 @@ mkdir -p ${RPM_BUILD_ROOT}/%{_localstatedir}/run/vpnc
 	PREFIX=/usr
 rm -rfv ${RPM_BUILD_ROOT}/usr/share/doc/vpnc
 mkdir -p ${RPM_BUILD_ROOT}/%{_sysconfdir}/tmpfiles.d
-install -m 0644 %{SOURCE2} ${RPM_BUILD_ROOT}/%{_sysconfdir}/tmpfiles.d/
+install -m 0644 %{SOURCE1} ${RPM_BUILD_ROOT}/%{_sysconfdir}/tmpfiles.d/
 
 %files
 %defattr(-,root,root)
