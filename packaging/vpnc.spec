@@ -13,7 +13,6 @@ Requires:       /usr/sbin/ip
 Requires:       /usr/bin/sed
 Source0:         %{name}-%{version}.tar.bz2
 Source1:        vpnc.conf
-Patch1:         vpnc-no-build-dates.patch
 
 %description
 A VPN client compatible with Cisco's EasyVPN equipment.
