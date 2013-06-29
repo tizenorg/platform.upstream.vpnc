@@ -13,6 +13,7 @@ Requires:       /usr/sbin/ip
 Requires:       /usr/bin/sed
 Source0:         %{name}-%{version}.tar.bz2
 Source1:        vpnc.conf
+Source1001: 	vpnc.manifest
 
 %description
 A VPN client compatible with Cisco's EasyVPN equipment.
@@ -30,6 +31,7 @@ It runs entirely in userspace and uses the TUN/TAP driver for access.
 
 %prep
 %setup -n %{name}
+cp %{SOURCE1001} .
 
 %build
 export CFLAGS="%optflags"
@@ -45,6 +47,7 @@ mkdir -p ${RPM_BUILD_ROOT}/%{_sysconfdir}/tmpfiles.d
 install -m 0644 %{SOURCE1} ${RPM_BUILD_ROOT}/%{_sysconfdir}/tmpfiles.d/
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %attr(0600,root,root) %config(noreplace) %ghost %{_sysconfdir}/vpnc/default.conf
 %dir %{_sysconfdir}/tmpfiles.d
