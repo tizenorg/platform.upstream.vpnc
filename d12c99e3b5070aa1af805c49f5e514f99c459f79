@@ -1,0 +1,8 @@
+Change-Id: Id12c99e3b5070aa1af805c49f5e514f99c459f79
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:39:04 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4941
+Project: platform/upstream/vpnc
+Branch: refs/heads/tizen
